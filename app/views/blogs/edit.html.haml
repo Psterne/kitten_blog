@@ -1,0 +1,8 @@
+= render 'navbar'
+
+.container
+  %h1.header.text-center Edit Blog
+  =render 'form'
+  .col-sm-12.text-center
+    =link_to 'Back', blogs_path
+    =link_to 'Destroy', blog_path(@blog), method: :delete, data: { confirm: 'Are you sure?'}

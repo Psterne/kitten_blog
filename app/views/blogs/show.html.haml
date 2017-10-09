@@ -1,0 +1,29 @@
+= render 'navbar'
+
+.container
+  .row
+    .col-sm-12
+      %h1.header
+        \#{@blog.title}
+  .row
+    .col-sm-6
+      %img{:src => "#{@blog.cover}", :width => "100%", :class => "img-thumbnail"}/
+    .col-sm-6
+      != @blog.body
+
+  .comments
+    .row
+      .col-sm-5
+        %h4 Comments:
+        =render @blog.comments
+      .col-sm-1
+        .divider
+      .col-sm-1
+      .col-sm-5
+        %h4 Add a comment:
+        =render 'comments/form'
+
+  .row
+    .col-sm-12
+      = link_to 'Edit', edit_blog_path(@blog)
+      = link_to 'Back', blogs_path

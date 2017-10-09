@@ -1,0 +1,27 @@
+= render 'navbar'
+
+.container.text-center
+  .row
+    .col-sm-12.header
+      %h1 All Blogs
+  .row
+    .col-sm-12
+      %table.table.text-left
+        %tr
+          %th
+          %th Blog Title
+          %th Content
+          %th Date Posted
+          %th Blog Link
+          -# %th
+        - @blogs.each do |blog|
+          %tr
+            %td
+              %img{:src => "#{blog.cover}", :width => "100%"}/
+              -# =image_tag("#{blog.cover}")
+            %td=blog.title
+            %td=truncate(strip_tags(blog.body), :length => 120)
+            %td=blog.created_at.to_date
+            %td=link_to 'More', blog_path(blog)
+            -# %td= link_to 'Edit', edit_blog_path(blog)
+            -# %td= link_to 'Destroy', blog_path(blog), method: :delete, data: { confirm: 'Are you sure?'}

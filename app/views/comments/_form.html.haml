@@ -1,0 +1,16 @@
+= form_with(model: [ @blog, @blog.comments.build ], local: true) do |form|
+  .form-group
+    .row
+      .col-sm-4
+        %label.control-label{:for => "comment_commenter"} Name
+      .col-sm-8
+        %input.form-control{:name => "comment[commenter]", :type => "text"}/
+  .form-group
+    .row
+      .col-sm-4
+        %label.control-label{:for => "comment_body"} Comment:
+      .col-sm-8
+        %textarea.form-control{:name => "comment[body]"}
+  .row
+    .col-sm-12
+      = form.submit :class => 'btn btn-scheme-1'

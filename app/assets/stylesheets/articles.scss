@@ -1,0 +1,120 @@
+// Place all the styles related to the Blogs controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+$color1: #fce4ec;
+$color2: #c9b2ba;
+$black: #000000;
+$white: #FFFFFF;
+
+$sec-color1: #e1bee7;
+$sec-color2: #af8eb5;
+
+.container {
+  margin-top: 80px;
+}
+
+.row {
+  margin: 50px auto;
+}
+
+.header {
+  margin: 50px auto 0px auto;
+}
+
+.container a {
+  color: $sec-color1 !important;
+}
+
+.container a:hover {
+  color: $sec-color2 !important;
+  text-decoration: none;
+}
+
+
+// Navigation Bar styling
+.topnav {
+    background-color: $color1;
+    overflow: hidden;
+    text-align: center;
+    a {
+        display: inline-block;
+        color: $black;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 18px;
+        text-transform: uppercase;
+    }
+    a:hover {
+        background-color: $color2;
+        color: $white;
+        text-decoration: none;
+    }
+}
+
+
+// Index Table styling
+th {
+  background-color: $color2;
+  color: $white;
+}
+
+th:nth-child(1), td:nth-child(1) {
+  width: 10%;
+}
+
+th:nth-child(2), td:nth-child(2) {
+  width: 20%;
+}
+
+th:nth-child(3), td:nth-child(3) {
+  width: 50%;
+}
+
+tr:last-child {
+  border-bottom: 5px solid $color2;
+}
+
+td a {
+  color: $sec-color2;
+}
+
+td a:hover {
+  color: $sec-color1;
+  text-decoration: none;
+}
+
+
+// Button & Form styles
+
+textarea {
+  min-height: 200px;
+}
+
+.comments {
+  margin-top: 70px;
+  border-top: 1px solid $color1;
+  .divider {
+    border-right: 2px solid $color1;
+    height: 100%;
+  }
+  .comment-box {
+    padding: 15px;
+    border: 2px solid $color2;
+  }
+  textarea {
+    min-height: 100px;
+  }
+}
+
+.btn-scheme-1 {
+  background-color: $sec-color2;
+  color: $white;
+  width: 40%;
+  margin: 0 0 0 60%;
+}
+
+.btn-scheme-1:hover {
+  background-color: $sec-color1;
+  color: $sec-color2;
+}

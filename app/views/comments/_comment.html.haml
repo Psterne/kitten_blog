@@ -1,0 +1,6 @@
+.row
+  .col-sm-4
+    = comment.commenter
+    = link_to 'Destroy Comment', [comment.blog, comment], method: :delete, data: { confirm: 'Are you sure?' }
+  .col-sm-8.comment-box
+    = comment.body
